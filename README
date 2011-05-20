@@ -1,0 +1,39 @@
+From Stackoverflow:
+http://stackoverflow.com/questions/6073555/castle-windsor-configuration-type-converter-with-dictionarystring-string-prope
+-------------------------------------------------------------------------------------------------------------------------
+I have read the Castle Windsor Documentation for [Type Converters](http://www.castleproject.org/container/documentation/trunk/usersguide/typeconverters.html) 
+and [passing dictionaries](http://www.castleproject.org/container/documentation/trunk/usersguide/arrayslistsanddicts.html#dict), 
+however I am getting an error that doesn't seem to be mentioned in the docs.
+
+My configuration:
+
+    <parameters>
+        <controllerTranslations>
+            <list>
+                <item>
+                    <areaName></areaName>
+                    <routeValue>MyRoute</routeValue>
+                    <translationTable>
+                        <dictionary>
+                            <entry key="en">MyRouteEn</entry>
+                            <entry key="fr">MyRouteFr</entry>
+                        </dictionary>
+                    </translationTable>
+                </item>
+                ....
+            </list>
+        </controllerTranslations>
+    </parameters>
+
+My TypeConverter:
+    
+    public override object PerformConversion(IConfiguration configuration, Type targetType)
+    {
+        var converter = new Converter(configuration.Children, Context);
+        var areaName = converter.Get<string>("areaName");
+        var routeValue = converter.Get<string>("routeValue");
+        var translationTable = converter.Get<Dictionary<string, string>>("translationTable");
+        ...
+    }
+
+I get the error, "You must provide a key for the dictionary entry" when the converter tries to get the dictionary.
