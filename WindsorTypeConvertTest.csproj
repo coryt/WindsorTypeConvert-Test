@@ -56,10 +56,8 @@
     <Compile Include="Routing\Config\RouteValueTranslationTypeConverter.cs" />
     <Compile Include="Routing\Config\RouteValueTranslationTypeConverterInstaller.cs" />
     <Compile Include="Routing\IRouteTranslationBuilder.cs" />
-    <Compile Include="Routing\IRouteValueTranslationProvider.cs" />
     <Compile Include="Routing\ITranslatableRouteValue.cs" />
     <Compile Include="Routing\RouteTranslationBuilder.cs" />
-    <Compile Include="Routing\RouteValueTranslationProvider.cs" />
     <Compile Include="Routing\TranslatableRouteValue.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>

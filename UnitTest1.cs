@@ -37,9 +37,6 @@ namespace WindsorTypeConvertTest
         public void BootstrapperConfiguresRouteTranslations_BuilderShouldBePopulated()
         {
             Assert.IsNotNull(builder);
-            Assert.IsNotNull(builder.ControllerTranslationProvider);
-            Assert.IsNotNull(builder.ActionTranslationProvider);
-            Assert.IsNotNull(builder.RouteValueTranslations);
         }
     }
 }
