@@ -59,7 +59,7 @@
     <Compile Include="Routing\ITranslatableRouteValue.cs" />
     <Compile Include="Routing\RouteTranslationBuilder.cs" />
     <Compile Include="Routing\TranslatableRouteValue.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="WindsorTypeConverterTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
