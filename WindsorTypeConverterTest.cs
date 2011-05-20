@@ -7,11 +7,8 @@ using WindsorTypeConvertTest.Routing.Config;
 
 namespace WindsorTypeConvertTest
 {
-    /// <summary>
-    /// Summary description for UnitTest1
-    /// </summary>
     [TestClass]
-    public class UnitTest1
+    public class WindsorTypeConverterTest
     {
         private IRouteTranslationBuilder builder;
 
